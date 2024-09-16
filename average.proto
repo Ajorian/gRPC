@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service AverageService {
+    rpc CalculateAverage(AverageRequest) returns (AverageResponse);
+}
+
+message AverageRequest {
+    repeated float numbers = 1; // List of float numbers
+}
+
+message AverageResponse {
+    float average = 1; // Average of the numbers
+}
