@@ -24,7 +24,7 @@ const server = new grpc.Server();
 server.addService(averageProto.service, { CalculateAverage: calculateAverage });
 
 // Bind the server to the specified port
-const PORT = process.env.PORT || 50051;
+const PORT = process.env.PORT || 8080;
 server.bindAsync(`0.0.0.0:${PORT}`, grpc.ServerCredentials.createInsecure(), (err, port) => {
     if (err) {
         console.error('Error starting server:', err);
